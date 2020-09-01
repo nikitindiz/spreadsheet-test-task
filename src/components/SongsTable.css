@@ -1,0 +1,26 @@
+.songs-table {
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}
+
+.songs-table thead td {
+    text-align: center;
+}
+
+.songs-table tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.songs-table td {
+    padding: 5px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.songs-table tbody tr td:last-child {
+    min-width: 40px;
+    text-align: center;
+}
+
+.songs-table td:first-child {
+    text-align: right;
+}
