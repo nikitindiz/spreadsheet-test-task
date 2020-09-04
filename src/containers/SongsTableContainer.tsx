@@ -58,7 +58,20 @@ export default class SongsTableContainer extends React.Component<any, SongsTable
 
     toggleWatch = (songId: number) => {
         const songs = [ ...this.state.songs ];
-        const songIndex = songs.findIndex(({ id }) => id === songId);
+
+        let songIndex = -1;
+
+        let counter = 0;
+
+        for (const { id } of songs) {
+            if (id === songId) {
+                songIndex = counter;
+                continue;
+            }
+
+            counter++;
+        }
+
         songs[songIndex] = {
             ...songs[songIndex],
             watching: !songs[songIndex].watching,
