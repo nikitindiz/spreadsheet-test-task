@@ -1,6 +1,7 @@
 import React from 'react';
 
 import WatchableSong from '../interfaces/WatchableSong';
+import EyeIcon from './EyeIcon';
 
 import './SongsTable.css';
 
@@ -26,7 +27,7 @@ export default class SongsTable extends React.Component<SongTableProps> {
                         <tr onClick={() => markSongAsWatched(id)}>
                             <td>{id}</td>
                             <td>{band} - {name}</td>
-                            <td>{watching ? '👁' : ''}</td>
+                            <td>{watching ? <EyeIcon /> : ''}</td>
                         </tr>
                     ))}
                 </tbody>
